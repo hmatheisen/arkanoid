@@ -3,10 +3,12 @@
 #include <ncurses.h>
 #include <stdlib.h>
 
+#define VAUS_COLOR 4
+
 typedef struct vaus_t
 {
   int pos;
-  int size;
+  uint8_t size;
 } Vaus;
 
 Vaus *init_vaus (void);

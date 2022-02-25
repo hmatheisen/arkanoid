@@ -28,7 +28,7 @@ init_curses (void)
   init_pair (2, COLOR_BLACK, COLOR_YELLOW);
   init_pair (3, COLOR_BLACK, COLOR_RED);
   // Vaus Color
-  init_pair (4, COLOR_BLACK, COLOR_WHITE);
+  init_pair (VAUS_COLOR, COLOR_BLACK, COLOR_WHITE);
   // Clear screen
   clear ();
 }

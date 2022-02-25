@@ -1,12 +1,13 @@
 #include "vaus.h"
 
-const int MOVE_SIZE = 4;
+const uint8_t MOVE_SIZE = 4;
+const uint8_t INIT_SIZE = 25;
 
 Vaus *
 init_vaus (void)
 {
   Vaus *vaus = malloc (sizeof (Vaus));
-  vaus->size = 25;
+  vaus->size = INIT_SIZE;
   vaus->pos = (COLS / 2) - (vaus->size / 2); // Put Vaus at the center
 
   return vaus;
@@ -15,12 +16,12 @@ init_vaus (void)
 void
 draw_vaus (Vaus vaus)
 {
-  attron (COLOR_PAIR (4));
+  attron (COLOR_PAIR (VAUS_COLOR));
   for (size_t i = 0; i < vaus.size; i++)
     {
       mvprintw (LINES - 1, vaus.pos + i, " ");
     }
-  attroff (COLOR_PAIR (4));
+  attroff (COLOR_PAIR (VAUS_COLOR));
 }
 
 void

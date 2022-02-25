@@ -7,8 +7,8 @@
 #define MAX_BRICKS_COLS 20
 #define MAX_BRICKS MAX_BRICKS_COLS*MAX_BRICKS_LINES
 
-static const int BRICK_LENGTH_FACTOR = 9;
-static const int BRICK_HEIGHT_FACTOR = 2;
+static const uint8_t BRICK_LENGTH_FACTOR = 9;
+static const uint8_t BRICK_HEIGHT_FACTOR = 2;
 
 typedef enum State
 {
